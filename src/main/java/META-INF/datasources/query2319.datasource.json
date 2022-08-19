@@ -1,0 +1,92 @@
+{
+  "customId": "fdquerys",
+  "queryName": "Fonte de Dados Service",
+  "sourceType": "rest",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": null,
+  "entityFullName": null,
+  "endpoint": {
+    "url": "https://lai-service-sql.herokuapp.com/sql/all",
+    "GET": {
+      "parameters": {}
+    },
+    "POST": {},
+    "PUT": {},
+    "DELETE": {},
+    "FILTER": {
+      "parameters": {}
+    },
+    "COUNT": {
+      "parameters": {}
+    },
+    "metadata": null
+  },
+  "query": "",
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "firebird": null,
+    "postgres": null,
+    "queryName": null
+  },
+  "defaultValuesProperties": {
+    "firebird": {
+      "key": true,
+      "nullable": true,
+      "type": "String"
+    },
+    "postgres": {
+      "key": true,
+      "nullable": true,
+      "type": "String"
+    },
+    "queryName": {
+      "key": true,
+      "nullable": true,
+      "type": "String"
+    }
+  },
+  "security": {
+    "firebird": null,
+    "postgres": null,
+    "queryName": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {
+    "Accept": "\"application/json\"",
+    "Content-Type": "\"application/json\""
+  },
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query2319/",
+  "audit": false
+}

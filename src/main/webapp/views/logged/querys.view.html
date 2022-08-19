@@ -1,0 +1,41 @@
+<div id="frame-off" data-container="true" class="col-md-12"> 
+      <h1 class="col-md-12 title-int">[{{list_querys.length}}] Gerenciador de Querys <i ng-click="cronapi.client('js.blockly.Util.ChangeAction').names('edit', 'item').run(false, null)" ng-show="!action" class="glyphicon glyphicon-plus btn-add"></i> <i ng-click="cronapi.client('js.blockly.Util.atualizarQuerys').names().run()" ng-show="!action" class="btn-add glyphicon glyphicon-repeat"></i></h1>
+    </div><div class="component-holder ng-scope  col-md-12" data-component="crn-textinput" id="crn-textinput-43516"><div class="form-group"><label for="input2411"></label><input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.search_query" class="form-control k-textbox input-search" id="input2411" placeholder="Pesquisar Query por: QueryName | Produto | SGBD" ng-change="cronapi.client('js.blockly.Util.pesquisarQuerys').names().run()"></div></div><div id="frame-on" data-container="true" class="col-md-12"> 
+      <div id="frame-list" data-container="true"> 
+        <div id="list-item" class="list-item" data-container="true" ng-repeat="item in list_querys" ng-show="!action"> 
+          <h3 class="info-query info">{{item.queryName}} <i ng-click="cronapi.client('js.blockly.Util.ChangeAction').names('edit', 'item').run(true, item)" class="btn-add glyphicon glyphicon-pencil"></i> <i ng-click="cronapi.client('js.blockly.Util.action').names('type', 'queryName').run('DELETE', item)" class="btn-add glyphicon glyphicon-remove"></i></h3> 
+          <h6 class="info-query sub-info"><b>SGBD: </b>{{item.sgbd}} | <b>Produto: </b>{{item.product}}</h6> 
+          <h6 class="info-query query">{{item.query}}</h6>
+        </div> 
+      </div> 
+      <div id="frame-include" data-container="true" ng-show="action"> 
+        <div class="component-holder ng-scope  col-md-12" data-component="crn-textinput" id="crn-textinput-452108">
+          <div class="form-group">
+            <label for="input5094">QueryName</label>
+            <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.queryname" class="form-control k-textbox" id="input5094" placeholder="">
+          </div>
+        </div><div class="component-holder ng-scope  col-md-6" data-component="crn-textinput" id="crn-textinput-18461">
+          <div class="form-group">
+            <label for="input509489371476166791">Product</label>
+            <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.product" class="form-control k-textbox" id="input509489371476166791" placeholder="">
+          </div>
+        </div><div class="component-holder ng-scope  col-md-6" data-component="crn-textinput" id="crn-textinput-23201">
+          <div class="form-group">
+            <label for="input5094893714761">SGBD</label>
+            <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.sgbd" class="form-control k-textbox" id="input5094893714761" placeholder="">
+          </div>
+        </div>
+        <div class="component-holder ng-scope col-md-12" data-component="crn-textarea" id="crn-textarea-46254"><div class="form-group"><label for="textArea3008">Query:</label><textarea id="textArea3008" ng-model="vars.query" maxlength="30000" style="resize:none" resize="resize:none;" class="form-control k-textbox" rows="20"></textarea></div></div>
+        
+        
+        <div ng-show="!edit" class="component-holder ng-scope  col-md-6" data-component="crn-button" id="crn-button-787965">
+          <button class="btn k-button btn-block btn-success" ng-click="cronapi.client('js.blockly.Util.action').names('type', 'queryName').run('POST', null)" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled=""><i class="color-white glyphicon glyphicon-ok" icon-theme="color-white"></i> <span class="color-white" text-theme="color-white"></span></button>
+        </div>
+        <div ng-show="edit" class="component-holder ng-scope  col-md-6" data-component="crn-button" id="crn-button-11721">
+          <button class="btn k-button btn-block btn-success" ng-click="cronapi.client('js.blockly.Util.action').names('type', 'queryName').run('PUT', vars.queryname)" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled=""><i class="color-white glyphicon glyphicon-ok" icon-theme="color-white"></i> <span class="color-white" text-theme="color-white"></span></button>
+        </div>
+        <div class="component-holder ng-scope  col-md-6" data-component="crn-button" id="crn-button-20391">
+          <button class="btn k-button btn-block btn-danger" ng-click="cronapi.client('js.blockly.Util.ChangeAction').names('edit', 'item').run(false, null)" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled=""><i class="color-white glyphicon glyphicon-remove" icon-theme="color-white"></i> <span class="color-white" text-theme="color-white"></span></button>
+        </div>
+      </div> 
+    </div>
